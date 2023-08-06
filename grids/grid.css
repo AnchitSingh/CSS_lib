@@ -1,0 +1,87 @@
+.grid-container {
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    flex-direction: row;
+    border-radius: .75rem;
+    position: relative;
+    --row: 100;
+    --column: 100;
+    --padding: .125rem;
+    --x: calc((100% - (var(--column) + 1)*var(--padding)) * (1 / var(--column)));
+    --y: calc((100% - (var(--row) + 1)*var(--padding)) * (1 / var(--row)));
+    padding: 0rem;
+}
+
+.grid-item {
+    position: absolute;
+    overflow: hidden;
+    transition: all .5s ease-in;
+    width: calc(var(--columns)*var(--x) + (var(--columns) - 1)*var(--padding));
+    height: calc(var(--rows)*var(--y) + (var(--rows) - 1)*var(--padding));
+    left: calc(var(--x-coord)*var(--x) + (var(--x-coord) + 1)*var(--padding));
+    top: calc(var(--y-coord)*var(--y) + (var(--y-coord) + 1)*var(--padding));
+}
+
+.a {
+    --rows: 83;
+    --columns: 100;
+    --x-coord: 0;
+    --y-coord: 0;
+
+    margin: 0;
+    padding: 0;
+    background: #f4755808;
+    border-radius: .85rem;
+    position: relative;
+}
+
+.b {
+    --rows: 16;
+    --columns: 25;
+    --x-coord: 0;
+    --y-coord: 84;
+
+    margin: 0;
+    padding: 0;
+    background: #f4755808;
+    border-radius: .75rem;
+}
+
+
+.c {
+    --rows: 16;
+    --columns: 25;
+    --x-coord: 25;
+    --y-coord: 84;
+
+    margin: 0;
+    padding: 0;
+    background: #f4755808;
+    border-radius: .5rem;
+}
+
+.d {
+    --rows: 16;
+    --columns: 25;
+    --x-coord: 50;
+    --y-coord: 84;
+
+    margin: 0;
+    padding: 0;
+    background: #f4755808;
+    border-radius: .5rem;
+}
+
+.e {
+
+    --rows: 16;
+    --columns: 25;
+    --x-coord: 75;
+    --y-coord: 84;
+
+    margin: 0;
+    padding: 0;
+    background: #f4755808;
+    border-radius: .75rem;
+}
